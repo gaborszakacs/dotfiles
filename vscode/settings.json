@@ -20,6 +20,7 @@
     "editor.find.seedSearchStringFromSelection": true,
     "window.title": "${activeEditorFull}${separator}${rootName}",
     "go.formatTool": "goimports",
+    "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
         {
             "before": [
@@ -49,8 +50,8 @@
         },
         {
             "before": [
-                "z",
-                "z"
+                "<leader>",
+                "s"
             ],
             "commands": [
                 {
@@ -65,8 +66,8 @@
     "vim.normalModeKeyBindings": [
         {
             "before": [
-                "z",
-                "z"
+                "<leader>",
+                "s"
             ],
             "commands": [
                 {
