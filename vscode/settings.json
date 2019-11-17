@@ -1,0 +1,107 @@
+{
+    "editor.fontSize": 15,
+    "editor.fontFamily": "Source Code Pro",
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "workbench.editor.enablePreview": false,
+    // "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "editor.renderIndentGuides": false,
+    "workbench.colorTheme": "Spacegray Ocean Dark",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    // so Flow JS can work :/
+    "javascript.validate.enable": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.emptySelectionClipboard": true,
+    "files.insertFinalNewline": true,
+    "editor.find.seedSearchStringFromSelection": true,
+    "window.title": "${activeEditorFull}${separator}${rootName}",
+    "go.formatTool": "goimports",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "<C-l>",
+            ],
+            "after": [
+                "<Right>"
+            ]
+        },
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "k",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "z"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                },
+                {
+                    "command": "extension.vim_escape"
+                }
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "z",
+                "z"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "z",
+                "z"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                }
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "editor.lineNumbers": "relative",
+    "settings.cycle": [
+        {
+            "id": "lineNumber",
+            "overrideWorkspaceSettings": false,
+            "values": [
+                {
+                    "editor.lineNumbers": "on"
+                },
+                {
+                    "editor.lineNumbers": "relative"
+                }
+            ]
+        }
+    ],
+}

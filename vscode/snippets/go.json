@@ -1,0 +1,22 @@
+{
+	"table driven test": {
+		"prefix": "tdt",
+		"body": "func Test$1(t *testing.T) {\n\ttestCases := []struct {\n\t\tdesc\tstring\n\t\t$2\n\t}{\n\t\t{\n\t\t\tdesc: \"$3\",\n\t\t\t$4\n\t\t},\n\t}\n\tfor _, tc := range testCases {\n\t\tt.Run(tc.desc, func(t *testing.T) {\n\t\t\t$0\n\t\t})\n\t}\n}",
+		"description": "Snippet for table driven test"
+	},
+	"test got want error": {
+		"prefix": "gwe",
+		"body": "t.Errorf(\"${1:funcName}(${2:args}) = ${3:got}, want ${4:want}\",${5:vars})",
+		"description": "Snippet for a failing test output. E.g. t.Errorf(\"sum(%d, %d) = %d, want %d\", a, b, got, want)"
+	},
+	"test got want fatal": {
+		"prefix": "gwf",
+		"body": "t.Fatalf(\"${1:funcName}(${2:args}) = ${3:got}, want ${4:want}\",${5:vars})",
+		"description": "Snippet for a fatal test output. E.g. t.Fatalf(\"sum(%d, %d) = %d, want %d\", a, b, got, want)"
+	},
+	"for statement": {
+		"prefix": "for",
+		"body": "for ${1:i} := 0; $1 < ${2:count}; $1${3:++} {\n\t$0\n}",
+		"description": "Snippet for a for loop"
+	},
+}
