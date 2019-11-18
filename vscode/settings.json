@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 15,
+    "editor.fontSize": 18,
     "editor.fontFamily": "Source Code Pro",
     "editor.tabSize": 2,
     "files.trimTrailingWhitespace": true,
@@ -10,6 +10,10 @@
     "editor.formatOnPaste": true,
     "editor.renderIndentGuides": false,
     "workbench.colorTheme": "Spacegray Ocean Dark",
+    "editor.rulers": [
+        80,
+        120
+    ],
     "editor.minimap.enabled": false,
     "editor.formatOnSave": true,
     // so Flow JS can work :/
