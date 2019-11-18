@@ -24,6 +24,9 @@
     "editor.find.seedSearchStringFromSelection": true,
     "window.title": "${activeEditorFull}${separator}${rootName}",
     "go.formatTool": "goimports",
+    "ruby.format": "rubocop",
+    "ruby.rubocop.onSave": true,
+    "editor.formatOnSaveTimeout": 5000,
     "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
         {
