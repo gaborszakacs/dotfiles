@@ -81,6 +81,17 @@
                     "command": "workbench.action.files.save",
                 }
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
         }
     ],
     "vim.visualModeKeyBindings": [
