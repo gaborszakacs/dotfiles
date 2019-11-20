@@ -55,20 +55,6 @@
                 "<Esc>"
             ]
         },
-        {
-            "before": [
-                "<leader>",
-                "s"
-            ],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                },
-                {
-                    "command": "extension.vim_escape"
-                }
-            ]
-        }
     ],
     "vim.normalModeKeyBindings": [
         {
