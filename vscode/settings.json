@@ -18,7 +18,7 @@
     "editor.formatOnSave": true,
     // so Flow JS can work :/
     "javascript.validate.enable": false,
-    "editor.acceptSuggestionOnEnter": "off",
+    "editor.acceptSuggestionOnEnter": "on",
     "editor.emptySelectionClipboard": true,
     "files.insertFinalNewline": true,
     "editor.find.seedSearchStringFromSelection": true,
