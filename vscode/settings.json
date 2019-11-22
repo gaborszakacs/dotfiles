@@ -56,7 +56,7 @@
             ]
         },
     ],
-    "vim.normalModeKeyBindings": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
                 "<leader>",
@@ -86,7 +86,33 @@
                 "_",
                 "d"
             ]
-        }
+        },
+        {
+            "before": [
+                "<C-h>",
+            ],
+            "after": [
+                "<C-w>",
+                "h",
+            ]
+        },
+        {
+            "before": [
+                "<C-l>",
+            ],
+            "after": [
+                "<C-w>",
+                "l",
+            ]
+        },
+        {
+            "before": [
+                "|",
+            ],
+            "commands": [
+                ":vsp",
+            ]
+        },
     ],
     "vim.useSystemClipboard": true,
     "editor.lineNumbers": "relative",
