@@ -114,6 +114,14 @@
                 ":vsp",
             ]
         },
+        {
+            "before": [
+                "<C-n>",
+            ],
+            "commands": [
+                "settings.cycle.lineNumber",
+            ]
+        },
     ],
     "vim.useSystemClipboard": true,
     "editor.lineNumbers": "relative",
