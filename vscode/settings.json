@@ -2,6 +2,7 @@
     "editor.fontSize": 18,
     "editor.fontFamily": "Source Code Pro",
     "editor.tabSize": 2,
+    "editor.smoothScrolling": true,
     "files.trimTrailingWhitespace": true,
     "workbench.editor.enablePreview": false,
     // "sublimeTextKeymap.promptV3Features": true,
