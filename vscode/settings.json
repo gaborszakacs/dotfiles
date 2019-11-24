@@ -116,6 +116,14 @@
         },
         {
             "before": [
+                "<C-p>", // doesn't work for some reason, probably defined in package.json?
+            ],
+            "commands": [
+                "workbench.action.quickOpen",
+            ]
+        },
+        {
+            "before": [
                 "<C-n>",
             ],
             "commands": [
@@ -139,4 +147,5 @@
             ]
         }
     ],
+    "vim.gdefault": true,
 }
