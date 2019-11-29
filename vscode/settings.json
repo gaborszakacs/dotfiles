@@ -130,6 +130,28 @@
                 "settings.cycle.lineNumber",
             ]
         },
+        {
+            "before": [
+                "u"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-r>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        }
     ],
     "vim.useSystemClipboard": true,
     "editor.lineNumbers": "relative",
