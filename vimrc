@@ -209,6 +209,12 @@ nnoremap gb :ls<CR>:b<Space>
 nnoremap <Leader>* :Ag <C-R><C-W><cr>:cw<cr>
 nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
+" load spec file in vertical split (close if split already exists)
+nnoremap ga :only<CR>:AV<CR>
+
+" Autocommands
+" show only relative path of buffer (vim-rails loads by absolute path)
+autocmd BufReadPost * silent! lcd .
 
 " Theme
 set statusline=%f%m%r%h%w%=\ %y\ %l,%v\ [%L] " Last character gets truncated 'd'
@@ -222,6 +228,8 @@ highlight GitGutterAdd ctermbg=black
 highlight GitGutterChange ctermbg=black
 highlight GitGutterDelete ctermbg=black
 highlight GitGutterChangeDelete ctermbg=black
+
+" Autoformat
 " debug with
 " let g:autoformat_verbosemode=1
 au BufWrite * :Autoformat
