@@ -215,6 +215,10 @@ nnoremap ga :only<CR>:AV<CR>
 " Autocommands
 " show only relative path of buffer (vim-rails loads by absolute path)
 autocmd BufReadPost * silent! lcd .
+" Triger `autoread` when files changes on disk
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 " Theme
 set statusline=%f%m%r%h%w%=\ %y\ %l,%v\ [%L] " Last character gets truncated 'd'
