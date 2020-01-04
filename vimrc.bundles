@@ -65,5 +65,6 @@ Plug 'honza/vim-snippets'
 Plug 'Chiel92/vim-autoformat'
 " auto detect whitespace config
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
