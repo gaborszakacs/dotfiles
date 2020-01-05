@@ -195,6 +195,9 @@ inoremap jk <esc>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>\| :vsplit<CR>
 nnoremap 0 ^
+nnoremap Y y$
+" delete without yanking
+nnoremap <leader>d "_d
 " close buffer without closing split
 nnoremap <Leader>c :bp\|bd #<CR>
 " list buffers and wait for a number

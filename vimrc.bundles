@@ -66,5 +66,6 @@ Plug 'Chiel92/vim-autoformat'
 " auto detect whitespace config
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
+Plug 'godoctor/godoctor.vim'
 
 call plug#end()
