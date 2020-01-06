@@ -16,7 +16,6 @@
         120
     ],
     "editor.minimap.enabled": false,
-    "editor.formatOnSave": true,
     // so Flow JS can work :/
     "javascript.validate.enable": false,
     "editor.acceptSuggestionOnEnter": "on",
@@ -27,6 +26,7 @@
     "go.formatTool": "goimports",
     "ruby.format": "rubocop",
     "ruby.rubocop.onSave": true,
+    "editor.formatOnSave": true,
     "editor.formatOnSaveTimeout": 5000,
     "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
@@ -170,4 +170,8 @@
         }
     ],
     "vim.gdefault": true,
+    "window.zoomLevel": 0,
+    "[javascript]": {
+        "editor.formatOnSave": false,
+    },
 }
