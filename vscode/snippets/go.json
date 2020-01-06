@@ -6,12 +6,12 @@
 	},
 	"test got want error": {
 		"prefix": "gwe",
-		"body": "t.Errorf(\"${1:funcName}(${2:args}) = ${3:got}, want ${4:want}\",${5:vars})",
+		"body": "if got != want {\n\tt.Errorf(\"got: %${1:}, want: %${1:}\", got, want)\n}",
 		"description": "Snippet for a failing test output. E.g. t.Errorf(\"sum(%d, %d) = %d, want %d\", a, b, got, want)"
 	},
 	"test got want fatal": {
-		"prefix": "gwf",
-		"body": "t.Fatalf(\"${1:funcName}(${2:args}) = ${3:got}, want ${4:want}\",${5:vars})",
+		"prefix": "gwde",
+		"body": "if !reflect.DeepEqual(got, want) {\n\tt.Errorf(\"got: %${1:}, want: %${1:}\", got, want)\n}",
 		"description": "Snippet for a fatal test output. E.g. t.Fatalf(\"sum(%d, %d) = %d, want %d\", a, b, got, want)"
 	},
 	"for statement": {
