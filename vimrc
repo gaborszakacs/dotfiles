@@ -95,10 +95,10 @@ if executable('ag')
   " Use ag in fzf for listing files. Lightning fast and respects .gitignore
   let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden --ignore .git -g ""'
 
-  if !exists(":Ag")
-    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-    nnoremap \ :Ag<SPACE>
-  endif
+  " if !exists(":Ag")
+  "   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap \ :Ag!<SPACE>
+  " endif
 endif
 
 " Make it obvious where 80 characters is
@@ -202,8 +202,8 @@ nnoremap <leader>d "_d
 nnoremap <Leader>c :bp\|bd #<CR>
 " list buffers and wait for a number
 nnoremap gb :ls<CR>:b<Space>
-" search for word under the cursor
-nnoremap <Leader>* :Ag <C-R><C-W><cr>:cw<cr>
+" search for word under the cursor in all files
+nnoremap <Leader>* :Ag! <C-R><C-W><cr>:cw<cr>
 nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
 " load spec file in vertical split (close if split already exists)
@@ -216,6 +216,15 @@ autocmd BufReadPost * silent! lcd .
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+" Ag makes a search using preview window to display results with proper colors
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, '--color-path "0;37" --color-line-number "0;37"', fzf#vim#with_preview('up:60%'), <bang>0)
+" redefine function from fzf.vim to remove --column flag (don't show columns in result set)
+" unfortunately it gives an empty result set, needs debugging
+" command! -bang -nargs=* Ag
+"   \ call fzf#vim#grep(
+"   \   'ag --nogroup --color --color-path "0;37" --color-line-number "0;37"'.shellescape(<q-args>), 1,
+"   \   fzf#vim#with_preview('up:60%'), <bang>0)
 
 " Theme
 set statusline=%f%m%r%h%w%=\ %y\ %l,%v\ [%L] " Last character gets truncated 'd'
