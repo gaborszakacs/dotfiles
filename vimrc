@@ -206,7 +206,7 @@ nnoremap gb :ls<CR>:b<Space>
 nnoremap <Leader>* :Ag! <C-R><C-W><cr>:cw<cr>
 nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
-" load spec file in vertical split (close if split already exists)
+" load spec/test file in vertical split (close if split already exists)
 nnoremap ga :only<CR>:AV<CR>
 
 " Autocommands
