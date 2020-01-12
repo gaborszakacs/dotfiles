@@ -15,3 +15,6 @@ command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 
+nmap <silent> gd <Plug>(coc-definition)
+nnoremap gm :GoDecls<CR>
+

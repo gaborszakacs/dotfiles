@@ -185,6 +185,8 @@ set relativenumber
 set ignorecase
 set smartcase
 set mouse=a
+" Large files would lose syntax otherwise
+set redrawtime=10000
 " Change cursor shape in different modes
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
@@ -206,8 +208,11 @@ nnoremap gb :ls<CR>:b<Space>
 nnoremap <Leader>* :Ag! <C-R><C-W><cr>:cw<cr>
 nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
-" load spec/test file in vertical split (close if split already exists)
+" load spec file in vertical split (close if split already exists)
 nnoremap ga :only<CR>:AV<CR>
+nmap gd <C-]>
+" go to method in current buffer
+nnoremap gm :BTags<CR>
 
 " Autocommands
 " show only relative path of buffer (vim-rails loads by absolute path)
@@ -290,7 +295,6 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
