@@ -202,8 +202,7 @@ nnoremap Y y$
 nnoremap <leader>d "_d
 " close buffer without closing split
 nnoremap <Leader>c :bp\|bd #<CR>
-" list buffers and wait for a number
-nnoremap gb :ls<CR>:b<Space>
+nnoremap gb :Buffers<CR>
 " search for word under the cursor in all files
 nnoremap <Leader>* :Ag! <C-R><C-W><cr>:cw<cr>
 nmap <Leader>sv :source ~/.vimrc<CR>
