@@ -23,6 +23,10 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+" Add  custom mappings to ReplaceWithRegister
+nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
+nmap <Leader>rr <Plug>ReplaceWithRegisterLine
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -141,7 +145,7 @@ nnoremap <Leader><Leader> <C-^>
 "nnoremap <silent> <Leader>gt :TestVisit<CR>
 
 " Run commands that require an interactive shell
-nnoremap <Leader>r :RunInInteractiveShell<Space>
+" nnoremap <Leader>r :RunInInteractiveShell<Space>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'

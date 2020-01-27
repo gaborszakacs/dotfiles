@@ -67,5 +67,6 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
 Plug 'godoctor/godoctor.vim'
-
+Plug 'junegunn/goyo.vim'
+Plug 'inkarkat/vim-ReplaceWithRegister'
 call plug#end()
