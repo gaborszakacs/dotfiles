@@ -189,6 +189,8 @@ set relativenumber
 set ignorecase
 set smartcase
 set mouse=a
+" Don't do auto line-breaks at 80 char
+set formatoptions-=t
 " Large files would lose syntax otherwise
 set redrawtime=10000
 " Change cursor shape in different modes
