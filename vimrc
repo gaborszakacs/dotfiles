@@ -218,6 +218,8 @@ nnoremap ga :only<CR>:AV<CR>
 nmap gd <C-]>
 " go to method in current buffer
 nnoremap gm :BTags<CR>
+nnoremap <Leader>fit ?\<it\> ['"]<CR>If<Esc><C-o>
+nnoremap <Leader>it ?\<fit\> ['"]<CR>x<C-o>
 
 " Autocommands
 " show only relative path of buffer (vim-rails loads by absolute path)
@@ -258,8 +260,15 @@ let g:formatdef_rubocop = "'rubocop-daemon-wrapper --auto-correct -o /dev/null -
 let g:formatters_ruby = ['rubocop']
 " This is handled by vim-go
 let g:formatters_go = []
+" These are handled by prettier
+let g:formatters_javascript = []
+let g:formatters_typescript = []
+let g:formatters_css = []
+let g:formatters_scss = []
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 au BufRead,BufNewFile *.js.erb set filetype=eruby.javascript.ruby
 
 
