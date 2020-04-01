@@ -14,5 +14,6 @@
                 ".hg/"
             ]
         }
-    }
+    },
+    "tslint.autoFixOnSave": true
 }
