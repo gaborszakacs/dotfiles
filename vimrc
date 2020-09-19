@@ -265,6 +265,8 @@ let g:formatters_javascript = []
 let g:formatters_typescript = []
 let g:formatters_css = []
 let g:formatters_scss = []
+" Don't want XML formatting
+let g:formatters_xml = []
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:prettier#autoformat = 1
