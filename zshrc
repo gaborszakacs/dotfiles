@@ -4,6 +4,9 @@ autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 prompt pure
 
+# https://github.com/fohte/rubocop-daemon
+export PATH="/usr/local/bin/rubocop-daemon-wrapper:$PATH"
+
 export PATH="$HOME/.bin:$PATH"
 
 # GO
