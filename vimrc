@@ -220,6 +220,9 @@ nmap gd <C-]>
 nnoremap gm :BTags<CR>
 nnoremap <Leader>fit ?\<it\> ['"]<CR>If<Esc><C-o>
 nnoremap <Leader>it ?\<fit\> ['"]<CR>x<C-o>
+nnoremap <Leader>ap :VtrAttachToPane<CR>
+nnoremap <Leader>sl :VtrSendLinesToRunner<CR>
+vnoremap <Leader>sl :VtrSendLinesToRunner<CR>
 
 " Autocommands
 " show only relative path of buffer (vim-rails loads by absolute path)
