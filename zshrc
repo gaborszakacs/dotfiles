@@ -1,4 +1,4 @@
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"
 
 autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
@@ -12,7 +12,9 @@ export PATH="$GOPATH/bin:$PATH"
 
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
-eval "$(rbenv init - --no-rehash)"
+# moved from rbenv to asdf
+# eval "$(rbenv init - --no-rehash)"
+. $HOME/.asdf/asdf.sh
 
 # React Native tutorial
 export ANDROID_HOME=${HOME}/Library/Android/sdk
