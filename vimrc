@@ -164,7 +164,8 @@ set splitright
 "nnoremap [r :ALEPreviousWrap<CR>
 
 " Map Ctrl + p to open fuzzy find (FZF)
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :Files!<cr>
+let g:fzf_preview_window = 'up:60%'
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
@@ -210,7 +211,7 @@ nnoremap Y y$
 nnoremap <leader>d "_d
 " close buffer without closing split
 nnoremap <Leader>c :bp\|bd #<CR>
-nnoremap gb :Buffers<CR>
+nnoremap gb :Buffers!<CR>
 " search for word under the cursor in all files
 nnoremap <Leader>* :Ag! <C-R><C-W><cr>:cw<cr>
 nmap <Leader>sv :source ~/.vimrc<CR>
