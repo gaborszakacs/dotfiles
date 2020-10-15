@@ -220,7 +220,7 @@ nnoremap <leader>n :call ToggleNumber()<CR>
 nnoremap ga :only<CR>:AV<CR>
 nmap gd <C-]>
 " go to method in current buffer
-nnoremap gm :BTags<CR>
+nnoremap gm :BTags!<CR>
 nnoremap <Leader>fit ?\<it\> ['"]<CR>If<Esc><C-o>
 nnoremap <Leader>it ?\<fit\> ['"]<CR>x<C-o>
 nnoremap <Leader>ap :VtrAttachToPane<CR>

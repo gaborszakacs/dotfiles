@@ -51,6 +51,15 @@ HISTSIZE=4096
 SAVEHIST=4096
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+
+# Workaround for slow input performance inside bitrise run process
+export BITRISE_SECRET_FILTERING=false
+
+# manual links
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # Funcs
 # setup tmux workspace with 1-2 splits
 ws() {
