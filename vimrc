@@ -260,12 +260,12 @@ highlight GitGutterChangeDelete ctermbg=black
 " Autoformat
 " debug with
 " let g:autoformat_verbosemode=1
-au BufWrite * :Autoformat
+au BufWritePre * :Autoformat
 " Use rubocop-daemon for faster checks https://github.com/fohte/rubocop-daemon#more-speed
 let g:formatdef_rubocop = "'rubocop-daemon-wrapper --auto-correct -o /dev/null -s '.bufname('%').' \| sed -n 2,\\$p'"
 let g:formatters_ruby = ['rubocop']
 " This is handled by vim-go
-let g:formatters_go = []
+let g:formatters_go = ['goimports']
 " These are handled by prettier
 let g:formatters_javascript = []
 let g:formatters_typescript = []
