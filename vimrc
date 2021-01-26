@@ -264,8 +264,11 @@ au BufWritePre * :Autoformat
 " Use rubocop-daemon for faster checks https://github.com/fohte/rubocop-daemon#more-speed
 let g:formatdef_rubocop = "'rubocop-daemon-wrapper --auto-correct -o /dev/null -s '.bufname('%').' \| sed -n 2,\\$p'"
 let g:formatters_ruby = ['rubocop']
-" This is handled by vim-go
-let g:formatters_go = ['goimports']
+" This is not handled by vim-go anymore as it fires multiple file change events
+if !exists('g:formatdef_gofumports')
+    let g:formatdef_gofumports = '"gofumports"'
+endif
+let g:formatters_go = ['gofumports']
 " These are handled by prettier
 let g:formatters_javascript = []
 let g:formatters_typescript = []
