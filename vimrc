@@ -11,7 +11,8 @@ set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitigno
 set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
-set incsearch     " do incremental searching
+" Replaced by incsearch plugin
+" set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set modelines=0   " Disable modelines as a security precaution
@@ -226,6 +227,20 @@ nnoremap <Leader>it ?\<fit\> ['"]<CR>x<C-o>
 nnoremap <Leader>ap :VtrAttachToPane<CR>
 nnoremap <Leader>sl :VtrSendLinesToRunner<CR>
 vnoremap <Leader>sl :VtrSendLinesToRunner<CR>
+
+" incsearch plugin
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+highlight Search ctermfg=0 ctermbg=9
 
 " Autocommands
 " show only relative path of buffer (vim-rails loads by absolute path)
