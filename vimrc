@@ -297,6 +297,13 @@ let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 au BufRead,BufNewFile *.js.erb set filetype=eruby.javascript.ruby
 
+" vim-test
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tg :TestVisit<CR>
+let g:test#strategy = 'vtr'
 
 " COC
 " It is handle by coc, disable in vim-go
