@@ -219,7 +219,8 @@ nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
 " load spec file in vertical split (close if split already exists)
 nnoremap ga :only<CR>:AV<CR>
-nmap gd <C-]>
+" go to definition or show a list if there are more
+nmap gd g<C-]>
 " go to method in current buffer
 nnoremap gm :BTags!<CR>
 nnoremap <Leader>fit ?\<it\> ['"]<CR>If<Esc><C-o>
