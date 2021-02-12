@@ -231,6 +231,8 @@ vnoremap <Leader>sl :VtrSendLinesToRunner<CR>
 
 " incsearch plugin
 set hlsearch
+" show count of matches
+set shortmess-=S
 let g:incsearch#auto_nohlsearch = 1
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
