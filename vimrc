@@ -301,12 +301,13 @@ let g:prettier#autoformat_require_pragma = 0
 au BufRead,BufNewFile *.js.erb set filetype=eruby.javascript.ruby
 
 " vim-test
-nmap <silent> <leader>tn :TestNearest<CR>
-nmap <silent> <leader>tf :TestFile<CR>
-nmap <silent> <leader>ts :TestSuite<CR>
-nmap <silent> <leader>tl :TestLast<CR>
-nmap <silent> <leader>tg :TestVisit<CR>
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>TS :TestSuite<CR>
+nmap <silent> <leader>TL :TestLast<CR>
+nmap <silent> <leader>TG :TestVisit<CR>
 let g:test#strategy = 'vtr'
+nmap <silent> <leader>e :VtrSendCommandToRunner go test ./e2e --tags=e2e --count=1<CR>
 
 " COC
 " It is handle by coc, disable in vim-go
