@@ -18,5 +18,6 @@ command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 
 nmap <silent> gd <Plug>(coc-definition)
-nnoremap gm :GoDecls<CR>
+# BTags! output is better as is now, fzf/preview would need more tweaking
+# nnoremap gm :GoDecls<CR>
 
