@@ -175,4 +175,8 @@
         "editor.formatOnSave": false,
     },
     "terminal.integrated.fontSize": 18,
+    "go.toolsManagement.autoUpdate": true,
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "editor.inlineSuggest.enabled": true,
 }

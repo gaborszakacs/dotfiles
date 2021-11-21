@@ -13,6 +13,9 @@ export PATH="$HOME/.bin:$PATH"
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
+# Flutter
+export PATH="$PATH:$HOME/flutter/bin"
+
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
 # moved from rbenv to asdf
@@ -59,7 +62,7 @@ export BITRISE_SECRET_FILTERING=false
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
+export PATH="$PATH:/usr/local/sbin"
 # Funcs
 # setup tmux workspace with 1-2 splits
 ws() {
