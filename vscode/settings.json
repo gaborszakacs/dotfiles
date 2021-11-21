@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 18,
+    "editor.fontSize": 19,
     "editor.fontFamily": "Source Code Pro",
     "editor.tabSize": 2,
     "editor.smoothScrolling": true,
@@ -21,11 +21,13 @@
     "editor.acceptSuggestionOnEnter": "on",
     "editor.emptySelectionClipboard": true,
     "files.insertFinalNewline": true,
-    "editor.find.seedSearchStringFromSelection": true,
+    "editor.find.seedSearchStringFromSelection": "always",
     "window.title": "${activeEditorFull}${separator}${rootName}",
     "go.formatTool": "goimports",
+    // "[ruby]": {
+    //     "editor.defaultFormatter": "misogi.ruby-rubocop"
+    // },
     "ruby.format": "rubocop",
-    "ruby.rubocop.onSave": true,
     "editor.formatOnSave": true,
     "editor.formatOnSaveTimeout": 5000,
     "vim.leader": "<space>",
@@ -42,15 +44,6 @@
             "before": [
                 "j",
                 "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        },
-        {
-            "before": [
-                "k",
-                "j"
             ],
             "after": [
                 "<Esc>"
@@ -170,7 +163,6 @@
         }
     ],
     "vim.gdefault": true,
-    "window.zoomLevel": 0,
     "[javascript]": {
         "editor.formatOnSave": false,
     },
@@ -178,5 +170,11 @@
     "go.toolsManagement.autoUpdate": true,
     "dart.debugExternalLibraries": false,
     "dart.debugSdkLibraries": false,
+    "liveshare.authenticationProvider": "GitHub",
+    "solargraph.externalServer": {
+        "host": "localhost",
+        "port": 7658
+    },
+    "window.zoomLevel": 1,
     "editor.inlineSuggest.enabled": true,
 }

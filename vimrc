@@ -307,7 +307,7 @@ nmap <silent> <leader>TS :TestSuite<CR>
 nmap <silent> <leader>TL :TestLast<CR>
 nmap <silent> <leader>TG :TestVisit<CR>
 let g:test#strategy = 'vtr'
-nmap <silent> <leader>e :VtrSendCommandToRunner go test ./e2e --tags=e2e --count=1<CR>
+nmap <silent> <leader>e :up<CR>:VtrSendCommandToRunner APP_ENV=test go test ./e2e --tags=e2e --count=1<CR>
 
 " COC
 " It is handle by coc, disable in vim-go

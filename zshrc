@@ -4,6 +4,9 @@ autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 prompt pure
 
+export EDITOR=vim
+bindkey -e
+
 # https://github.com/fohte/rubocop-daemon
 export PATH="/usr/local/bin/rubocop-daemon-wrapper:$PATH"
 
@@ -63,6 +66,10 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
+
+
+# disable homebrew auto update for god's sake
+export HOMEBREW_NO_AUTO_UPDATE=1
 # Funcs
 # setup tmux workspace with 1-2 splits
 ws() {
