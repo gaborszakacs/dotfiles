@@ -214,7 +214,7 @@ nnoremap <leader>d "_d
 nnoremap <Leader>c :bp\|bd #<CR>
 nnoremap gb :Buffers!<CR>
 " search for word under the cursor in all files
-nnoremap <Leader>* :Ag! <C-R><C-W><cr>:cw<cr>
+nnoremap <Leader>* :Ag! <C-R><C-W><cr>
 nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
 " load spec file in vertical split (close if split already exists)
