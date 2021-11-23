@@ -12,6 +12,9 @@ ln -s ~/src/dotfiles/vim/coc-settings.json ~/.vim/coc-settings.json
 ln -s ~/src/dotfiles/vim/ftplugin/ ~/.vim/ftplugin
 ln -s ~/src/dotfiles/vim/syntax/ ~/.vim/syntax
 
+# NVIM
+ln -s ~/src/dotfiles/vim/coc-settings.json ~/.config/nvim/coc-settings.json
+
 # BIN
 ln -s ~/src/dotfiles/bin/tat /usr/local/bin/tat
 
