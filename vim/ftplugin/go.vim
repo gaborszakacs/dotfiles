@@ -1,6 +1,5 @@
 " Delete/rename events get fired which confuses fswatch, let's use the autoformat plugin instead for this
 let g:go_fmt_autosave = 0
-let g:go_fmt_command = "goimports"
 " let g:go_highlight_types = 1
 " let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1

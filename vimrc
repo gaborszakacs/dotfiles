@@ -1,3 +1,5 @@
+" TODO: try out https://github.com/qxxxb/vim-searchhi
+
 " Based on https://github.com/thoughtbot/dotfiles
 set encoding=utf-8
 
@@ -296,7 +298,7 @@ let g:formatters_scss = []
 let g:formatters_xml = []
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
-let g:prettier#autoformat = 1
+let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
 au BufRead,BufNewFile *.js.erb set filetype=eruby.javascript.ruby
 

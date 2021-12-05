@@ -15,5 +15,14 @@
             ]
         }
     },
-    "tslint.autoFixOnSave": true
+    "go.goplsOptions": {
+        "buildFlags": ["-tags=integration,e2e"]
+    },
+    "go.goplsEnv":{
+        "GOFLAGS": "-tags=integration,e2e"
+    },
+    "tslint.autoFixOnSave": true,
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "diagnostic.messageTarget": "echo"
 }
