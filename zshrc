@@ -1,5 +1,5 @@
 # eval "$(hub alias -s)"
-
+fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 prompt pure
@@ -36,7 +36,7 @@ export PATH=$HOME/src/flutter/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval "$(jira --completion-script-zsh)"
+# eval "$(jira --completion-script-zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/gaborszakacs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gaborszakacs/google-cloud-sdk/path.zsh.inc'; fi
