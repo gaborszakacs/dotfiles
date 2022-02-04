@@ -14,6 +14,7 @@ ln -s ~/src/dotfiles/vim/syntax/ ~/.vim/syntax
 
 # NVIM
 ln -s ~/src/dotfiles/vim/coc-settings.json ~/.config/nvim/coc-settings.json
+ln -s ~/src/dotfiles/vim/nvim_init.vim ~/.config/nvim/init.vim
 
 # BIN
 ln -s ~/src/dotfiles/bin/tat /usr/local/bin/tat

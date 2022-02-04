@@ -214,6 +214,7 @@ nnoremap Y y$
 nnoremap <leader>d "_d
 " close buffer without closing split
 nnoremap <Leader>c :bp\|bd #<CR>
+nnoremap <Leader>o :only<CR>
 nnoremap gb :Buffers!<CR>
 " search for word under the cursor in all files
 nnoremap <Leader>* :Ag! <C-R><C-W><cr>
@@ -282,7 +283,7 @@ highlight GitGutterChangeDelete ctermbg=black
 " let g:autoformat_verbosemode=1
 au BufWritePre * :Autoformat
 " Use rubocop-daemon for faster checks https://github.com/fohte/rubocop-daemon#more-speed
-let g:formatdef_rubocop = "'rubocop-daemon-wrapper --auto-correct -o /dev/null -s '.bufname('%').' \| sed -n 2,\\$p'"
+let g:formatdef_rubocop = "'/usr/local/bin/rubocop-daemon-wrapper/rubocop --auto-correct -o /dev/null -s '.bufname('%').' \| sed -n 2,\\$p'"
 let g:formatters_ruby = ['rubocop']
 " This is not handled by vim-go anymore as it fires multiple file change events
 if !exists('g:formatdef_gofumports')
