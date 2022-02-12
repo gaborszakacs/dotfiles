@@ -25,7 +25,16 @@ export PATH="/usr/local/bin:$PATH"
 # eval "$(rbenv init - --no-rehash)"
 . $HOME/.asdf/asdf.sh
 
+# brew autocompletions
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
 # React Native tutorial
+
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
