@@ -286,10 +286,10 @@ au BufWritePre * :Autoformat
 let g:formatdef_rubocop = "'/usr/local/bin/rubocop-daemon-wrapper/rubocop --auto-correct -o /dev/null -s '.bufname('%').' \| sed -n 2,\\$p'"
 let g:formatters_ruby = ['rubocop']
 " This is not handled by vim-go anymore as it fires multiple file change events
-if !exists('g:formatdef_gofumports')
-    let g:formatdef_gofumports = '"gofumports"'
+if !exists('g:formatdef_gofumpt')
+    let g:formatdef_gofumpt = '"gofumpt"'
 endif
-let g:formatters_go = ['gofumports']
+let g:formatters_go = ['gofumpt']
 " These are handled by prettier
 let g:formatters_javascript = []
 let g:formatters_typescript = []
