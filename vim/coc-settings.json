@@ -1,20 +1,6 @@
 {
     "suggest.noselect": false,
     "solargraph.commandPath": "/Users/gaborszakacs/.asdf/shims/solargraph",
-    "languageserver": {
-        "golang": {
-            "command": "gopls",
-            "filetypes": [
-                "go"
-            ],
-            "rootPatterns": [
-                "go.mod",
-                ".vim/",
-                ".git/",
-                ".hg/"
-            ]
-        }
-    },
     "go.goplsOptions": {
         "buildFlags": ["-tags=integration,e2e"]
     },
@@ -23,6 +9,5 @@
     },
     "tslint.autoFixOnSave": true,
     "diagnostic.virtualText": true,
-    "diagnostic.virtualTextCurrentLineOnly": false,
-    "diagnostic.messageTarget": "echo"
+    "diagnostic.virtualTextCurrentLineOnly": false
 }
