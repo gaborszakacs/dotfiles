@@ -1,4 +1,6 @@
 " TODO: try out https://github.com/qxxxb/vim-searchhi
+" for coc-extension local development
+" set runtimepath^=/Users/gaborszakacs/src/coc-buf-lint
 
 " Based on https://github.com/thoughtbot/dotfiles
 set encoding=utf-8
