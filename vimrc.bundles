@@ -30,7 +30,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 " Use patch for go test -> gotest
-" Plug 'janko-m/vim-test'
+" Plug 'vim-test/vim-test'
 Plug 'gaborszakacs/vim-test', { 'branch': 'patch-1' }
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
@@ -76,5 +76,5 @@ Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-Plug 'github/copilot.vim'
+Plug 'github/copilot.vim', { 'branch': 'release' }
 call plug#end()
