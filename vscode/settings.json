@@ -9,10 +9,11 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": true,
-    "editor.renderIndentGuides": false,
     "workbench.colorTheme": "Spacegray Ocean Dark",
-    "editor.rulers": [80, 120],
-    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        80,
+        120
+    ],
     // so Flow JS can work :/
     "javascript.validate.enable": false,
     "editor.acceptSuggestionOnEnter": "on",
@@ -30,17 +31,29 @@
     "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
         {
-            "before": ["<C-l>"],
-            "after": ["<Right>"]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<Right>"
+            ]
         },
         {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<leader>", "s"],
+            "before": [
+                "<leader>",
+                "s"
+            ],
             "commands": [
                 {
                     "command": "workbench.action.files.save"
@@ -48,37 +61,70 @@
             ]
         },
         {
-            "before": ["0"],
-            "after": ["^"]
+            "before": [
+                "0"
+            ],
+            "after": [
+                "^"
+            ]
         },
         {
-            "before": ["<leader>", "d"],
-            "after": ["\"", "_", "d"]
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
         },
         {
-            "before": ["<C-h>"],
-            "after": ["<C-w>", "h"]
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<C-w>",
+                "h"
+            ]
         },
         {
-            "before": ["<C-l>"],
-            "after": ["<C-w>", "l"]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<C-w>",
+                "l"
+            ]
         },
         {
-            "before": ["|"],
-            "commands": [":vsp"]
+            "before": [
+                "|"
+            ],
+            "commands": [
+                ":vsp"
+            ]
         },
         {
             "before": [
                 "<C-p>" // doesn't work for some reason, probably defined in package.json?
             ],
-            "commands": ["workbench.action.quickOpen"]
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
         },
         {
-            "before": ["<C-n>"],
-            "commands": ["settings.cycle.lineNumber"]
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                "settings.cycle.lineNumber"
+            ]
         },
         {
-            "before": ["u"],
+            "before": [
+                "u"
+            ],
             "after": [],
             "commands": [
                 {
@@ -87,7 +133,9 @@
             ]
         },
         {
-            "before": ["<C-r>"],
+            "before": [
+                "<C-r>"
+            ],
             "after": [],
             "commands": [
                 {
@@ -97,7 +145,7 @@
         }
     ],
     "vim.useSystemClipboard": true,
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "on",
     "settings.cycle": [
         {
             "id": "lineNumber",
@@ -126,5 +174,15 @@
         "port": 7658
     },
     "window.zoomLevel": 1,
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "gitlens.defaultDateFormat": null,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": false
+    },
+    "dart.debugExternalPackageLibraries": false,
+    "editor.minimap.enabled": false,
+    "editor.guides.indentation": false
 }

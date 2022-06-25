@@ -41,6 +41,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # Flutter
 export PATH=$HOME/src/flutter/bin:$PATH
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
