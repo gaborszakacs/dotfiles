@@ -233,6 +233,8 @@ nnoremap <Leader>it ?\<fit\> ['"]<CR>x<C-o>
 nnoremap <Leader>ap :VtrAttachToPane<CR>
 nnoremap <Leader>sl :VtrSendLinesToRunner<CR>
 vnoremap <Leader>sl :VtrSendLinesToRunner<CR>
+inoremap <silent> <Leader>sd <C-r>=CocActionAsync('showSignatureHelp')<CR>
+nnoremap <silent> <Leader>sd :call CocActionAsync('showSignatureHelp')<CR>
 
 " incsearch plugin
 set hlsearch
@@ -356,7 +358,10 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call CocActionAsync('showSignatureHelp')
+" nnoremap <silent> K call CocActionAsync('showSignatureHelp')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

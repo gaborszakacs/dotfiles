@@ -2,10 +2,10 @@
     "suggest.noselect": false,
     "solargraph.commandPath": "/Users/gaborszakacs/.asdf/shims/solargraph",
     "go.goplsOptions": {
-        "buildFlags": ["-tags=integration,e2e"]
+        "buildFlags": ["-tags=integration,e2e,wireinject"]
     },
     "go.goplsEnv":{
-        "GOFLAGS": "-tags=integration,e2e"
+        "GOFLAGS": "-tags=integration,e2e,wireinject"
     },
     "tslint.autoFixOnSave": true,
     "diagnostic.virtualText": true,
