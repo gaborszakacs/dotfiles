@@ -4,7 +4,7 @@ autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 prompt pure
 
-export EDITOR=vim
+export EDITOR=nvim
 bindkey -e
 
 # https://github.com/fohte/rubocop-daemon
