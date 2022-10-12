@@ -1,4 +1,16 @@
 {
+    "suggest.floatConfig": {
+        "border": true
+    },
+    "diagnostic.floatConfig": {
+        "border": true
+    },
+    "signature.floatConfig": {
+        "border": true
+    },
+    "hover.floatConfig": {
+        "border": true
+    },
     "suggest.noselect": false,
     "solargraph.commandPath": "/Users/gaborszakacs/.asdf/shims/solargraph",
     "go.goplsOptions": {
@@ -9,5 +21,7 @@
     },
     "tslint.autoFixOnSave": true,
     "diagnostic.virtualText": true,
-    "diagnostic.virtualTextCurrentLineOnly": false
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "languageserver": {
+    }
 }

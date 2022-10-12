@@ -6,6 +6,8 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 " let g:go_highlight_variable_assignments = 1
 let g:go_highlight_variable_declarations = 1
+" Don't override 'K', let coc handle it
+let g:go_doc_keywordprg_enabled = 0
 
 setlocal listchars=tab:\ \ ,trail:·,nbsp:·
 setlocal noexpandtab

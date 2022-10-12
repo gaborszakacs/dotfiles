@@ -327,6 +327,7 @@ set hidden
 set cmdheight=2
 set shortmess+=c
 set signcolumn=yes
+highlight CocFloating ctermbg=0
 " Use tab for trigger completion
 " It would jump snippet positions too, but use C-j instead - more reliable
 inoremap <silent><expr> <TAB>
@@ -357,10 +358,16 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window
-" nnoremap <silent> K :call <SID>show_documentation()<CR>
-nnoremap <silent> K :call CocActionAsync('showSignatureHelp')
-" nnoremap <silent> K call CocActionAsync('showSignatureHelp')
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
 " autocmd CursorHold * silent call CocActionAsync('highlight')
 
 function! s:show_documentation()
