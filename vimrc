@@ -286,9 +286,8 @@ highlight GitGutterChangeDelete ctermbg=black
 " debug with
 " let g:autoformat_verbosemode=1
 au BufWritePre * :Autoformat
-" Use rubocop-daemon for faster checks https://github.com/fohte/rubocop-daemon#more-speed
-let g:formatdef_rubocop = "'/usr/local/bin/rubocop-daemon-wrapper/rubocop --auto-correct -o /dev/null -s '.bufname('%').' \| sed -n 2,\\$p'"
 let g:formatters_ruby = ['rubocop']
+let g:formatdef_rubocop = "'rubocop --server --autocorrect -o /dev/null -s '.bufname('%').' \| sed -n 2,\\$p'"
 " This is not handled by vim-go anymore as it fires multiple file change events
 if !exists('g:formatdef_gofumpt')
     let g:formatdef_gofumpt = '"gofumpt"'
@@ -397,8 +396,8 @@ augroup mygroup
 augroup end
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-" xmap <leader>a  <Plug>(coc-codeaction-selected)
-" nmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
 " nmap <leader>ac  <Plug>(coc-codeaction)
@@ -455,3 +454,17 @@ function! ToggleNumber()
    endif
 endfunc
 
+" Folding
+function! MyFoldText()
+    let nblines = v:foldend - v:foldstart + 1
+    let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+    let line = getline(v:foldstart)
+    let comment = substitute(line, '/\*\|\*/\|{{{\d\=', '', 'g')
+    " let expansionString = repeat(".", w - strwidth(nblines.comment.'"'))
+    let expansionString = repeat(" ", w - strwidth(nblines.comment.'"'))
+    " let txt = '>' . comment . expansionString . nblines
+    " TODO: if first letter of comment is space, then prefix only with  '>'
+    let txt = '>' . comment[1:] . '... (' . nblines . ')' . expansionString
+    return txt
+endfunction
+set foldtext=MyFoldText()

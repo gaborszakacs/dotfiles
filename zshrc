@@ -57,6 +57,8 @@ alias gt="fswatch --event=Updated -e \".*\" -i \"\\.go$\" . | xargs -n1 -I {} sh
 alias gta="fswatch -e \".*\" -i \"\\.go$\" . | xargs -n1 -I {} sh -c \"clear && printf '\e[3J';go test ./... -tags=e2e -count=1 | sed ''/ok/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/''\""
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+alias mtc="(cd ~/src/web-dev-env && make monolith-test-console)"
+
 # Weird error message when starting vim
 export LC_ALL=en_US.UTF-8
 
