@@ -236,15 +236,18 @@ vnoremap <Leader>sl :VtrSendLinesToRunner<CR>
 inoremap <silent> <Leader>sd <C-r>=CocActionAsync('showSignatureHelp')<CR>
 nnoremap <silent> <Leader>sd :call CocActionAsync('showSignatureHelp')<CR>
 
+" nnoremap <C-d> <C-d>zz
+" nnoremap <C-u> <C-u>zz
+
 " incsearch plugin
 set hlsearch
 " show count of matches
 set shortmess-=S
 let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
+map n  <Plug>(incsearch-nohl-n)zz
+map N  <Plug>(incsearch-nohl-N)zz
+map *  <Plug>(incsearch-nohl-*)zz
+map #  <Plug>(incsearch-nohl-#)zz
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 map /  <Plug>(incsearch-forward)

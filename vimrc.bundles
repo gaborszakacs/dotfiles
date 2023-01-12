@@ -79,4 +79,5 @@ Plug 'prettier/vim-prettier', {
 Plug 'github/copilot.vim', { 'branch': 'release' }
 Plug 'ggandor/leap.nvim'
 Plug 'hashivim/vim-terraform'
+Plug 'psliwka/vim-smoothie'
 call plug#end()
