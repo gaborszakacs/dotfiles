@@ -14,7 +14,8 @@
     "suggest.noselect": false,
     "solargraph.commandPath": "/Users/gaborszakacs/.asdf/shims/solargraph",
     "go.goplsOptions": {
-        "buildFlags": ["-tags=integration,e2e,wireinject"]
+        "buildFlags": ["-tags=integration,e2e,wireinject"],
+        "local": "github.com/bitrise-io"
     },
     "go.goplsEnv":{
         "GOFLAGS": "-tags=integration,e2e,wireinject"
@@ -23,5 +24,41 @@
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly": false,
     "languageserver": {
+        "golangci-lint-languageserver": {
+            "command": "golangci-lint-langserver",
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "command": ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]
+            }
+        },
+        "sorbet": {
+            "command": "srb",
+            "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features"],
+            "filetypes": ["rubyyyyy"],
+            "rootPatterns": ["sorbet/config"],
+            "initializationOptions": {},
+            "settings": {}
+        },
+        "ruby-lsp": {
+            "command": "ruby-lsp",
+            "filetypes": ["rubyyyy"],
+            "rootPatterns": ["Gemfile"],
+            "initializationOptions": {
+                "enabledFeatures": [
+                    "codeActions",
+                    "diagnostics",
+                    "documentHighlights",
+                    "documentLink",
+                    "documentSymbols",
+                    "foldingRanges",
+                    "formatting",
+                    "hover",
+                    "inlayHint",
+                    "onTypeFormatting",
+                    "selectionRanges"
+                ]
+            },
+            "settings": {}
+        }
     }
 }

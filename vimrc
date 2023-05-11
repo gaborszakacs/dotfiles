@@ -109,6 +109,7 @@ if executable('ag')
   " if !exists(":Ag")
   "   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
     nnoremap \ :Ag!<SPACE>
+    " nnoremap \ <cmd>Telescope live_grep<cr>
   " endif
 endif
 
@@ -169,7 +170,8 @@ set splitright
 "nnoremap [r :ALEPreviousWrap<CR>
 
 " Map Ctrl + p to open fuzzy find (FZF)
-nnoremap <c-p> :Files!<cr>
+" nnoremap <c-p> :Files!<cr>
+nnoremap <c-p> <cmd>Telescope find_files<cr>
 let g:fzf_preview_window = 'up:60%'
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
@@ -217,15 +219,18 @@ nnoremap <leader>d "_d
 " close buffer without closing split
 nnoremap <Leader>c :bp\|bd #<CR>
 nnoremap <Leader>o :only<CR>
-nnoremap gb :Buffers!<CR>
+" nnoremap gb :Buffers!<CR>
+nnoremap gb <cmd>Telescope buffers<cr>
 " search for word under the cursor in all files
-nnoremap <Leader>* :Ag! <C-R><C-W><cr>
+" nnoremap <Leader>* :Ag! <C-R><C-W><cr>
+nnoremap <Leader>* <cmd>Telescope grep_string<cr>
 nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
 " load spec file in vertical split (close if split already exists)
 nnoremap ga :only<CR>:AV<CR>
 " go to definition or show a list if there are more
-nmap gd g<C-]>
+" nmap gd g<C-]>
+nmap <silent> gd <Plug>(coc-definition)
 " go to method in current buffer
 nnoremap gm :BTags!<CR>
 nnoremap <Leader>fit ?\<it\> ['"]<CR>If<Esc><C-o>
@@ -351,9 +356,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Or use `complete_info` if your vim support it, like:
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" Use `[d` and `]d` to navigate diagnostics
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gy <Plug>(coc-type-definition)

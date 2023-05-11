@@ -16,6 +16,7 @@ ln -s ~/src/dotfiles/vim/autoload/test ~/.vim/autoload/test
 # NVIM
 ln -s ~/src/dotfiles/vim/coc-settings.json ~/.config/nvim/coc-settings.json
 ln -s ~/src/dotfiles/vim/nvim_init.vim ~/.config/nvim/init.vim
+ln -s ~/src/dotfiles/vim/nvim_after ~/.config/nvim/after
 
 # BIN
 ln -s ~/src/dotfiles/bin/tat /usr/local/bin/tat

@@ -145,7 +145,7 @@
         }
     ],
     "vim.useSystemClipboard": true,
-    "editor.lineNumbers": "on",
+    "editor.lineNumbers": "relative",
     "settings.cycle": [
         {
             "id": "lineNumber",
