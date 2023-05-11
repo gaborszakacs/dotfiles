@@ -60,5 +60,6 @@
             },
             "settings": {}
         }
-    }
+    },
+    "snippets.ultisnips.pythonPrompt": false
 }

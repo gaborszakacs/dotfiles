@@ -1,8 +1,4 @@
 # eval "$(hub alias -s)"
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-autoload -Uz compinit && compinit
-prompt pure
 
 export EDITOR=nvim
 bindkey -e
@@ -23,7 +19,8 @@ export PATH="$PATH:$HOME/flutter/bin"
 export PATH="/usr/local/bin:$PATH"
 # moved from rbenv to asdf
 # eval "$(rbenv init - --no-rehash)"
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # brew autocompletions
 if type brew &>/dev/null
@@ -93,4 +90,9 @@ ws() {
   HEIGHT=$(($(tmux display-message -p '#{pane_height}') * 2 / 3 * 2))
   tmux resize-pane -y $HEIGHT
 }
+
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+autoload -Uz compinit && compinit
+prompt pure
 
