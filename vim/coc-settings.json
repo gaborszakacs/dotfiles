@@ -15,12 +15,13 @@
     "solargraph.commandPath": "/Users/gaborszakacs/.asdf/shims/solargraph",
     "go.goplsOptions": {
         "buildFlags": ["-tags=integration,e2e,wireinject"],
-        "local": "github.com/bitrise-io"
+        "local": "github.com/bitrise-io,github.com/bitrise-steplib"
     },
     "go.goplsEnv":{
         "GOFLAGS": "-tags=integration,e2e,wireinject"
     },
     "tslint.autoFixOnSave": true,
+    "eslint.autoFixOnSave": true,
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly": false,
     "languageserver": {
@@ -28,13 +29,13 @@
             "command": "golangci-lint-langserver",
             "filetypes": ["go"],
             "initializationOptions": {
-                "command": ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]
+                "command": ["golangci-lint", "run", "--skip-dirs", ".*vendor.*", "--out-format", "json", "--issues-exit-code=1"]
             }
         },
         "sorbet": {
             "command": "srb",
             "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features"],
-            "filetypes": ["rubyyyyy"],
+            "filetypes": ["rubyyyy"],
             "rootPatterns": ["sorbet/config"],
             "initializationOptions": {},
             "settings": {}

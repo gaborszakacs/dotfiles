@@ -98,3 +98,4 @@ autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 prompt pure
 
+export PATH="/opt/homebrew/opt/dotnet@6/bin:$PATH"
