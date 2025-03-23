@@ -58,6 +58,11 @@ alias mdc="(cd ~/src/web-dev-env && make monolith-dev-console)"
 alias mtc="(cd ~/src/web-dev-env && make monolith-test-console)"
 alias mrc="(cd ~/src/web-dev-env && make monolith-rails-console)"
 
+
+ctags_ruby() {
+  ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp . $(bundle list --paths)
+}
+
 # Weird error message when starting vim
 export LC_ALL=en_US.UTF-8
 

@@ -228,9 +228,24 @@ nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
 " load spec file in vertical split (close if split already exists)
 nnoremap ga :only<CR>:AV<CR>
+
 " go to definition or show a list if there are more
 " nmap gd g<C-]>
-nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gd <Plug>(coc-definition)
+
+" use Coc or fall back to ctags
+function! s:GoToDefinition()
+  if CocAction('jumpDefinition')
+    return v:true
+  endif
+
+  let ret = execute("silent! normal \<C-]>")
+  if ret =~ "Error" || ret =~ "错误"
+    call searchdecl(expand('<cword>'))
+  endif
+endfunction
+nmap <silent> gd :call <SID>GoToDefinition()<CR>
+
 " go to method in current buffer
 nnoremap gm :BTags!<CR>
 nnoremap <Leader>fit ?\<it\> ['"]<CR>If<Esc><C-o>
