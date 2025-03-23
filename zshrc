@@ -78,6 +78,12 @@ export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
 
+# protobuf 3
+export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/protobuf@3/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/protobuf@3/include"
+
+
 
 # disable homebrew auto update for god's sake
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -99,3 +105,8 @@ autoload -Uz compinit && compinit
 prompt pure
 
 export PATH="/opt/homebrew/opt/dotnet@6/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/gaborszakacs/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

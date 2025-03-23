@@ -279,6 +279,7 @@ command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, '--color-path "0;37" --colo
 "   \   fzf#vim#with_preview('up:60%'), <bang>0)
 
 " Theme
+set notermguicolors
 set statusline=%f%m%r%h%w%=\ %y\ %l,%v\ [%L] " Last character gets truncated 'd'
 colorscheme base16-ocean
 highlight clear LineNr
@@ -290,6 +291,7 @@ highlight GitGutterAdd ctermbg=black
 highlight GitGutterChange ctermbg=black
 highlight GitGutterDelete ctermbg=black
 highlight GitGutterChangeDelete ctermbg=black
+highlight Statement cterm=NONE " otherwise it makes Ruby 'return' 'do' 'end' etc bold
 
 " Autoformat
 " debug with
@@ -319,7 +321,7 @@ au BufRead,BufNewFile *.js.erb set filetype=eruby.javascript.ruby
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>TS :TestSuite<CR>
-nmap <silent> <leader>TL :TestLast<CR>
+nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>TG :TestVisit<CR>
 let g:test#strategy = 'vtr'
 nmap <silent> <leader>e :up<CR>:VtrSendCommandToRunner APP_ENV=test go test ./e2e --tags=e2e --count=1<CR>
@@ -338,11 +340,12 @@ set signcolumn=yes
 highlight CocFloating ctermbg=0
 " Use tab for trigger completion
 " It would jump snippet positions too, but use C-j instead - more reliable
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+" We don't use this for now as it would override Copilot Accept
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? coc#_select_confirm() :
+"       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
