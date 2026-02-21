@@ -1,0 +1,15 @@
+# Font
+font-family = Source Code Pro
+font-size = 19
+font-thicken = true
+font-thicken-strength = 1
+font-style = Regular
+font-style-bold = Black
+font-style-italic = Italic
+font-style-bold-italic = Black Italic
+adjust-cell-height = 10%
+adjust-cursor-height = 0
+adjust-cell-width = -1
+
+theme = SpaceGray Bright
+
