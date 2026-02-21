@@ -29,7 +29,7 @@
             "command": "golangci-lint-langserver",
             "filetypes": ["go"],
             "initializationOptions": {
-                "command": ["golangci-lint", "run", "--skip-dirs", ".*vendor.*", "--out-format", "json", "--issues-exit-code=1"]
+                "command": ["golangci-lint", "run", "--skip-dirs", ".*vendor.*", "--output.json.path", "stdout", "--show-stats=false", "--issues-exit-code=1"]
             }
         },
         "sorbet": {

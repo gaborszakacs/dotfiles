@@ -171,7 +171,10 @@ set splitright
 
 " Map Ctrl + p to open fuzzy find (FZF)
 " nnoremap <c-p> :Files!<cr>
-nnoremap <c-p> <cmd>Telescope find_files<cr>
+" nnoremap <c-p> <cmd>Telescope find_files<cr>
+" show files/folders starting with dot, but ignore vendor and .git
+" project-level .ignore can file can be used to unignore files that were gitignored, like !.env.local
+nnoremap <c-p> :lua require('telescope.builtin').find_files({hidden=true, file_ignore_patterns={"vendor/.*", "^.git/"}})<CR>
 let g:fzf_preview_window = 'up:60%'
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
@@ -228,6 +231,9 @@ nmap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
 " load spec file in vertical split (close if split already exists)
 nnoremap ga :only<CR>:AV<CR>
+nnoremap <Leader>rm :! rm %<CR>
+" copy current file path and line number to clipboard, used to easily instruct Claude
+nnoremap <silent> <Leader>yc :let @+=expand('%:.') . ':' . line('.')<CR>
 
 " go to definition or show a list if there are more
 " nmap gd g<C-]>
@@ -239,10 +245,8 @@ function! s:GoToDefinition()
     return v:true
   endif
 
-  let ret = execute("silent! normal \<C-]>")
-  if ret =~ "Error" || ret =~ "错误"
-    call searchdecl(expand('<cword>'))
-  endif
+  " Use feedkeys instead of execute for proper key sequence interpretation
+  call feedkeys("g\<C-]>", "n")
 endfunction
 nmap <silent> gd :call <SID>GoToDefinition()<CR>
 
@@ -294,7 +298,8 @@ command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, '--color-path "0;37" --colo
 "   \   fzf#vim#with_preview('up:60%'), <bang>0)
 
 " Theme
-set notermguicolors
+" termguicolors is required for Ghostty, it was noterm in iterm2 before
+"set notermguicolors
 set statusline=%f%m%r%h%w%=\ %y\ %l,%v\ [%L] " Last character gets truncated 'd'
 colorscheme base16-ocean
 highlight clear LineNr

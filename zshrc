@@ -20,8 +20,8 @@ export PATH="/usr/local/bin:$PATH"
 # moved from rbenv to asdf
 # eval "$(rbenv init - --no-rehash)"
 # . $HOME/.asdf/asdf.sh
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 # brew autocompletions
 if type brew &>/dev/null
 then
@@ -83,13 +83,6 @@ export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
 
-# protobuf 3
-export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/protobuf@3/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/protobuf@3/include"
-
-
-
 # disable homebrew auto update for god's sake
 export HOMEBREW_NO_AUTO_UPDATE=1
 # Funcs
@@ -115,3 +108,4 @@ fpath=(/Users/gaborszakacs/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+export PATH="$HOME/.local/bin:$PATH" # for Claude Code
