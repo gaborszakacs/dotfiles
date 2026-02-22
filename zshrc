@@ -54,10 +54,7 @@ alias gt="fswatch --event=Updated -e \".*\" -i \"\\.go$\" . | xargs -n1 -I {} sh
 alias gta="fswatch -e \".*\" -i \"\\.go$\" . | xargs -n1 -I {} sh -c \"clear && printf '\e[3J';go test ./... -tags=e2e -count=1 | sed ''/ok/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/''\""
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias mdc="(cd ~/src/web-dev-env && make monolith-dev-console)"
-alias mtc="(cd ~/src/web-dev-env && make monolith-test-console)"
-alias mrc="(cd ~/src/web-dev-env && make monolith-rails-console)"
-
+[ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.zsh
 
 ctags_ruby() {
   ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp . $(bundle list --paths)
@@ -69,8 +66,8 @@ export LC_ALL=en_US.UTF-8
 # History
 setopt hist_ignore_all_dups inc_append_history
 HISTFILE=~/.zhistory
-HISTSIZE=4096
-SAVEHIST=4096
+HISTSIZE=10000
+SAVEHIST=10000
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 
