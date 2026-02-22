@@ -1,6 +1,6 @@
 [
 	{
 		"key": "ctrl+shift+l",
-		"command": "settings.cycle.lineNumber",
+		"command": "settings.cycle.lineNumber"
 	}
 ]

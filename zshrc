@@ -46,10 +46,10 @@ export NVM_DIR="$HOME/.nvm"
 # eval "$(jira --completion-script-zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/gaborszakacs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gaborszakacs/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/gaborszakacs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gaborszakacs/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
 alias gt="fswatch --event=Updated -e \".*\" -i \"\\.go$\" . | xargs -n1 -I {} sh -c \"clear && printf '\e[3J';go test ./... | sed ''/ok/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/''\""
 alias gta="fswatch -e \".*\" -i \"\\.go$\" . | xargs -n1 -I {} sh -c \"clear && printf '\e[3J';go test ./... -tags=e2e -count=1 | sed ''/ok/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/''\""
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -100,9 +100,10 @@ autoload -Uz compinit && compinit
 prompt pure
 
 export PATH="/opt/homebrew/opt/dotnet@6/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH" # for Claude Code
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/gaborszakacs/.docker/completions $fpath)
+fpath=(/Users/gabor.szakacs/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
-export PATH="$HOME/.local/bin:$PATH" # for Claude Code
+eval "$(/Users/gabor.szakacs/.local/bin/mise activate zsh)"

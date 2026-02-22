@@ -78,13 +78,13 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'github/copilot.vim', { 'branch': 'release' }
-Plug 'ggandor/leap.nvim', { 'branch': 'main' }
+Plug 'https://codeberg.org/andyg/leap.nvim', { 'branch': 'main' }
 Plug 'hashivim/vim-terraform'
 Plug 'psliwka/vim-smoothie'
 
 " NEOVIM
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
+" Plug 'nvim-treesitter/playground'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', {'branch': 'main', 'do': 'make' }

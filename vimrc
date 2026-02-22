@@ -1,6 +1,6 @@
 " TODO: try out https://github.com/qxxxb/vim-searchhi
 " for coc-extension local development
-" set runtimepath^=/Users/gaborszakacs/src/coc-buf-lint
+" set runtimepath^=/Users/gabor.szakacs/src/coc-buf-lint
 
 " Based on https://github.com/thoughtbot/dotfiles
 set encoding=utf-8
@@ -237,7 +237,7 @@ nnoremap <silent> <Leader>yc :let @+=expand('%:.') . ':' . line('.')<CR>
 
 " go to definition or show a list if there are more
 " nmap gd g<C-]>
-" nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
 
 " use Coc or fall back to ctags
 function! s:GoToDefinition()
@@ -248,7 +248,7 @@ function! s:GoToDefinition()
   " Use feedkeys instead of execute for proper key sequence interpretation
   call feedkeys("g\<C-]>", "n")
 endfunction
-nmap <silent> gd :call <SID>GoToDefinition()<CR>
+" nmap <silent> gd :call <SID>GoToDefinition()<CR>
 
 " go to method in current buffer
 nnoremap gm :BTags!<CR>

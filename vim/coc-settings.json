@@ -12,7 +12,7 @@
         "border": true
     },
     "suggest.noselect": false,
-    "solargraph.commandPath": "/Users/gaborszakacs/.asdf/shims/solargraph",
+    "solargraph.commandPath": "~/.local/share/mise/installs/ruby/3.3.9/bin/solargraph",
     "go.goplsOptions": {
         "buildFlags": ["-tags=integration,e2e,wireinject"],
         "local": "github.com/bitrise-io,github.com/bitrise-steplib"
