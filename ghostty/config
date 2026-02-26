@@ -13,3 +13,5 @@ adjust-cell-width = -1
 
 theme = SpaceGray Bright
 
+mouse-scroll-multiplier=1
+
