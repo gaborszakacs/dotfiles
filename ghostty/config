@@ -15,3 +15,5 @@ theme = SpaceGray Bright
 
 mouse-scroll-multiplier=1
 
+# cmd m would trigger ctrl+space (my prefix for tmux) and then z to zoom (macOS minimise window hot key was disabled )
+keybind = cmd+m=text:\x00\x7a
