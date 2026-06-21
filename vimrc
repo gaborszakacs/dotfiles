@@ -239,6 +239,10 @@ nnoremap <silent> <Leader>yc :let @+=expand('%:.') . ':' . line('.')<CR>
 " nmap gd g<C-]>
 nmap <silent> gd <Plug>(coc-definition)
 
+" diffview open
+nnoremap <leader>do :DiffviewOpen<CR>
+nnoremap <leader>dc :DiffviewClose<CR>
+
 " use Coc or fall back to ctags
 function! s:GoToDefinition()
   if CocAction('jumpDefinition')

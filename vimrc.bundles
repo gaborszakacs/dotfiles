@@ -88,5 +88,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', {'branch': 'main', 'do': 'make' }
+Plug 'sindrets/diffview.nvim'
 
 call plug#end()
