@@ -167,7 +167,7 @@
     "terminal.integrated.fontSize": 18,
     "go.toolsManagement.autoUpdate": true,
     "dart.debugExternalLibraries": false,
-    "dart.debugSdkLibraries": false,
+    "dart.debugSdkLibraries": true,
     "liveshare.authenticationProvider": "GitHub",
     "solargraph.externalServer": {
         "host": "localhost",
@@ -182,7 +182,12 @@
         "plaintext": false,
         "markdown": false
     },
-    "dart.debugExternalPackageLibraries": false,
+    "dart.debugExternalPackageLibraries": true,
     "editor.minimap.enabled": false,
-    "editor.guides.indentation": false
+    "editor.guides.indentation": false,
+    "editor.accessibilitySupport": "off",
+    "arb-editor.suppressedWarnings": [
+        "missing_metadata_for_key"
+    ],
+    "github.copilot.nextEditSuggestions.enabled": true
 }

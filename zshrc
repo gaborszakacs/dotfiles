@@ -40,6 +40,13 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=$HOME/src/flutter/bin:$PATH
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+# required by brew install ccache to speed up iOS builds
+export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
+export CCACHE_SLOPPINESS=clang_index_store,file_stat_matches,include_file_ctime,include_file_mtime,ivfsoverlay,pch_defines,modules,system_headers,time_macros
+export CCACHE_FILECLONE=true
+export CCACHE_DEPEND=true
+export CCACHE_INODECACHE=true
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -100,7 +107,11 @@ autoload -Uz compinit && compinit
 prompt pure
 
 export PATH="/opt/homebrew/opt/dotnet@6/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH" # for Claude Code
+
+export ABEV_JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/gabor.szakacs/.docker/completions $fpath)
 autoload -Uz compinit
